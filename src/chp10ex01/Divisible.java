@@ -1,7 +1,5 @@
 package chp10ex01;
 
-import java.util.Arrays;
-
 public class Divisible {
 	public int[] divisible(int[] array, int divisor) throws MyCheckedException {
 		int resultArraySize = 0;
