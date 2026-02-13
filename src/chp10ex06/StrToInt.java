@@ -11,11 +11,11 @@ public class StrToInt {
 			result += ascii;
 			
 			if(i == str.length() - 1) {
-				return result;
+				continue;
 			}
 			result *= 10;
 		}
-		return 0;
+		return result;
 	}
 	public static void main(String[] args) {
 		StrToInt strToInt = new StrToInt();
