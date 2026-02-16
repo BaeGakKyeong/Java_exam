@@ -6,22 +6,49 @@ public class StrToInt {
 		int result = 0;
 		int ascii;
 		
-		for(int i = 0; i < str.length(); i++) {
-			ascii = str.charAt(i) - 48;
-			result += ascii;
-			
-			if(i == str.length() - 1) {
-				continue;
+		if(str.charAt(0) != '+' && str.charAt(0) != '-') {
+			for(int i = 0; i < str.length(); i++) {
+				ascii = str.charAt(i) - 48;
+				result += ascii;
+				
+				if(i == str.length() - 1) {
+					continue;
+				}
+				result *= 10;
 			}
-			result *= 10;
 		}
+		else if(str.charAt(0) == '+') {
+			for(int i = 1; i < str.length(); i++) {
+				ascii = str.charAt(i) - 48;
+				result += ascii;
+				
+				if(i == str.length() - 1) {
+					continue;
+				}
+				result *= 10;
+			}
+		}
+		else {
+			for(int i = 1; i < str.length(); i++) {
+				ascii = str.charAt(i) - 48;
+				result += ascii;
+				
+				if(i == str.length() - 1) {
+					continue;
+				}
+				result *= 10;
+			}
+			result *= -1;
+		}
+		
+		
 		return result;
 	}
 	public static void main(String[] args) {
 		StrToInt strToInt = new StrToInt();
 		
-//		System.out.println(strToInt.getStrToInt("-1234"));
-//		System.out.println(strToInt.getStrToInt("+1234"));
+		System.out.println(strToInt.getStrToInt("-1234"));
+		System.out.println(strToInt.getStrToInt("+1234"));
 		System.out.println(strToInt.getStrToInt("1234"));
 	}
 
