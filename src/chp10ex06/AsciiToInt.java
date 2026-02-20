@@ -11,5 +11,3 @@ public class AsciiToInt {
 		return result;
 	}
 }
-
-//i를 밖에서 선언하면 안되나?
